@@ -59,7 +59,7 @@ void surf(Input IN, inout SurfaceOutput o)
 	texcoord.x += _UV;
 
 	half3 tex2 = UnpackNormal(tex2D(_FoamMap, texcoord));// *0.25 + perspectiveCorrection));
-	o.Normal = lerp(tex2,UnpackNormal(tex2D(_BumpMap, texcoord)),0.75);
+	o.Normal = lerp(tex2,UnpackNormal(tex2D(_BumpMap, texcoord)),0.75); //I thought this could do a nice view
 	//o.Normal = UnpackNormal(tex2D(_BumpMap, texcoord));
 	color = lerp(color,refl,0.5 );
 
